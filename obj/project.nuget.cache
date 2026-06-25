@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "3FztBRgK9zQ=",
+  "success": true,
+  "projectFilePath": "/Users/marie/RiderProjects/window/window/window.csproj",
+  "expectedPackageFiles": [
+    "/Users/marie/.nuget/packages/microsoft.net.illink.tasks/10.0.3/microsoft.net.illink.tasks.10.0.3.nupkg.sha512",
+    "/Users/marie/.nuget/packages/microsoft.netcore.app.ref/10.0.9/microsoft.netcore.app.ref.10.0.9.nupkg.sha512",
+    "/Users/marie/.nuget/packages/microsoft.netcore.app.runtime.osx-arm64/10.0.3/microsoft.netcore.app.runtime.osx-arm64.10.0.3.nupkg.sha512",
+    "/Users/marie/.nuget/packages/microsoft.aspnetcore.app.runtime.osx-arm64/10.0.3/microsoft.aspnetcore.app.runtime.osx-arm64.10.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

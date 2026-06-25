@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - /Users/marie/RiderProjects/window/window/bin/Debug/net10.0-macos/osx-arm64/window.app/Contents/MonoBundle/libclrgc.dylib
