@@ -14,5 +14,6 @@
 }
 
 @property (nonatomic, retain) IBOutlet NSScrollView *DocumentEditor;
+@property (unsafe_unretained) IBOutlet NSTextView *TxtField;
 
 @end

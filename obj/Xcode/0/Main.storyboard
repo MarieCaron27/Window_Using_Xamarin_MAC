@@ -764,11 +764,12 @@
                     </view>
                     <connections>
                         <outlet property="DocumentEditor" destination="NrT-bA-yFn" id="1hO-bm-xhx"/>
+                        <outlet property="TxtField" destination="KJa-3S-4r8" id="0JG-dt-6lB"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="56" y="880"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="lTf-Eg-dax">

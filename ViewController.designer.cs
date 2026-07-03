@@ -16,11 +16,19 @@ namespace window
 		[Outlet]
 		AppKit.NSScrollView DocumentEditor { get; set; }
 
+		[Outlet]
+		AppKit.NSTextView TxtField { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
 			if (DocumentEditor != null) {
 				DocumentEditor.Dispose ();
 				DocumentEditor = null;
+			}
+
+			if (TxtField != null) {
+				TxtField.Dispose ();
+				TxtField = null;
 			}
 
 		}

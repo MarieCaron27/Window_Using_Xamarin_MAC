@@ -46,21 +46,21 @@ public partial class ViewController : NSViewController
         CloseWindow();
     }
     
-    /*public override void AwakeFromNib ()
+    public override void AwakeFromNib ()
     {
         base.AwakeFromNib ();
 
         // Show when the document is edited
-        DocumentEditor.TextDidChange += (sender, e) => {
+        TxtField.TextDidChange += (sender, e) => {
             // Mark the document as dirty
             DocumentEdited = true;
         };
 
         // Overriding this delegate is required to monitor the TextDidChange event
-        DocumentEditor.ShouldChangeTextInRanges += (NSTextView view, NSValue[] values, string[] replacements) => {
+        TxtField.ShouldChangeTextInRanges += (NSTextView view, NSValue[] values, string[] replacements) => {
             return true;
         };
-    }*/
+    }
     
     public void CloseWindow ()
     {
@@ -78,5 +78,17 @@ public partial class ViewController : NSViewController
     private void HandleTextChanged(NSNotification notification)
     {
         View.Window.DocumentEdited = true;
+    }
+    
+    public string? FilePath { get; set; }
+
+    public void LoadFile(string path)
+    {
+        FilePath = path;
+        EditorTextView.Value = File.ReadAllText(path);
+
+        View.Window.RepresentedUrl = NSUrl.FromFilename(path);
+        View.Window.SetTitleWithRepresentedFilename(path);
+        View.Window.DocumentEdited = false;
     }
 }
