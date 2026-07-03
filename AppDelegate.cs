@@ -31,16 +31,15 @@ public class AppDelegate : NSApplicationDelegate
     }
     
     [Export ("newDocument:")]
-    void NewDocument (NSObject sender) 
-    {
+    void NewDocument (NSObject sender) {
         // Get new window
         var storyboard = NSStoryboard.FromName ("Main", null);
-        var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
-
+        var controller = storyboard.InstantiateInitialController() as NSWindowController;
+        
         // Display
-        controller.ShowWindow(this);
+        controller?.ShowWindow(this);
 
         // Set the title
-        controller.Window.Title = (++UntitledWindowCount == 1) ? "untitled" : string.Format ("untitled {0}", UntitledWindowCount);
+        controller?.Window.Title = (++UntitledWindowCount == 1) ? "untitled" : string.Format ("untitled {0}", UntitledWindowCount);
     }
 }

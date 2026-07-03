@@ -220,3 +220,4 @@
 /Users/marie/RiderProjects/window/window/obj/Debug/net10.0-macos/osx-arm64/window.pdb
 /Users/marie/RiderProjects/window/window/obj/Debug/net10.0-macos/osx-arm64/window.genruntimeconfig.cache
 /Users/marie/RiderProjects/window/window/obj/Debug/net10.0-macos/osx-arm64/ref/window.dll
+/Users/marie/RiderProjects/window/window/obj/Debug/net10.0-macos/osx-arm64/window.sourcelink.json
