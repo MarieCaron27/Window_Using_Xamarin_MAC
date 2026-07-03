@@ -23,7 +23,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="Q4X-0O-iaT" kind="show" id="pNt-2f-PLa"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -690,6 +694,21 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="D46A8B56-2196-4104-9D34-144F34502D57" autosavesConfiguration="NO" showsBaselineSeparator="NO" displayMode="iconAndLabel" sizeMode="regular" id="s6h-e3-jFK">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="M62-TM-fIu"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="r2D-cW-CqL"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="kqQ-ca-ZOP"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="0kr-US-WL7"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="EBR-Np-rIh"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="M62-TM-fIu"/>
+                                <toolbarItem reference="r2D-cW-CqL"/>
+                                <toolbarItem reference="EBR-Np-rIh"/>
+                                <toolbarItem reference="kqQ-ca-ZOP"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -700,7 +719,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="69" y="384"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -709,11 +728,117 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrT-bA-yFn">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <clipView key="contentView" drawsBackground="NO" id="CoO-aI-km1">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="KJa-3S-4r8">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="480" height="270"/>
+                                            <size key="maxSize" width="480" height="10000000"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="4Lz-KF-Cly">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="17"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="rxo-nW-NvF">
+                                    <rect key="frame" x="463" y="0.0" width="17" height="270"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="NrT-bA-yFn" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6rQ-gv-uFZ"/>
+                            <constraint firstAttribute="trailing" secondItem="NrT-bA-yFn" secondAttribute="trailing" id="DGl-Rx-tWz"/>
+                            <constraint firstAttribute="bottom" secondItem="NrT-bA-yFn" secondAttribute="bottom" id="Ebv-Za-f4f"/>
+                            <constraint firstItem="NrT-bA-yFn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="JKW-cZ-mBF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DocumentEditor" destination="NrT-bA-yFn" id="1hO-bm-xhx"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="lTf-Eg-dax">
+            <objects>
+                <windowController id="Q4X-0O-iaT" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="hPF-wu-cxp">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="255" y="326" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1728" height="1084"/>
+                        <view key="contentView" id="Gyz-m8-VwF">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <toolbar key="toolbar" implicitIdentifier="D66F27A3-A96A-4593-9C0C-33FB700EC1CB" autosavesConfiguration="NO" showsBaselineSeparator="NO" displayMode="iconAndLabel" sizeMode="regular" id="4MF-lt-wdd">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="1EDA1245-5B39-412B-9D16-FADE0006B21D" label="Test 1" paletteLabel="Test 1" tag="-1" image="test1 copie" bordered="YES" id="Q8b-VA-fuh">
+                                    <size key="minSize" width="24" height="24"/>
+                                    <size key="maxSize" width="24" height="24"/>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="DCEB3867-DD2A-4240-990D-7C863AC73D6C" label="Test 2" paletteLabel="Test 2" tag="-1" image="test2" bordered="YES" id="uO8-5f-YAx">
+                                    <size key="minSize" width="24" height="24"/>
+                                    <size key="maxSize" width="24" height="24"/>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="298D66B0-209F-49A8-91AC-920A48B4BE1B" label="Test 3" paletteLabel="Test 3" tag="-1" image="test3 copie 2" bordered="YES" id="aXZ-Bz-LCu">
+                                    <size key="minSize" width="24" height="24"/>
+                                    <size key="maxSize" width="24" height="24"/>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="203B7F39-9D82-4713-BAA7-91DC68FD8B4F" label="Test 4" paletteLabel="Test 4" tag="-1" image="test4" bordered="YES" id="CLf-oN-wzw">
+                                    <size key="minSize" width="24" height="24"/>
+                                    <size key="maxSize" width="24" height="24"/>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="Q8b-VA-fuh"/>
+                                <toolbarItem reference="uO8-5f-YAx"/>
+                                <toolbarItem reference="aXZ-Bz-LCu"/>
+                                <toolbarItem reference="CLf-oN-wzw"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="Q4X-0O-iaT" id="joL-UN-ldc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="xoa-Kj-ago" kind="relationship" relationship="window.shadowedContentViewController" id="EPq-3q-yXd"/>
+                    </connections>
+                </windowController>
+                <customObject id="dJx-qb-aTR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="325"/>
+        </scene>
+        <!--Preferences Window Controller-->
+        <scene sceneID="taT-xP-3Ob">
+            <objects>
+                <viewController id="xoa-Kj-ago" customClass="PreferencesWindowController" sceneMemberID="viewController">
+                    <view key="view" id="o5I-Zi-mhF">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="hh6-Ha-qeU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1701" y="424"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="test1 copie" width="454.5" height="454.5"/>
+        <image name="test2" width="175" height="148"/>
+        <image name="test3 copie 2" width="139.5" height="144"/>
+        <image name="test4" width="515" height="388"/>
+    </resources>
 </document>

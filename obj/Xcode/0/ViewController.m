@@ -9,4 +9,6 @@
 
 @implementation ViewController
 
+@synthesize DocumentEditor = _DocumentEditor;
+
 @end

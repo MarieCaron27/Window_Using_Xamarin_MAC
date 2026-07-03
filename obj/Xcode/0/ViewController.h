@@ -10,6 +10,9 @@
 
 
 @interface ViewController : NSViewController {
+	NSScrollView *_DocumentEditor;
 }
+
+@property (nonatomic, retain) IBOutlet NSScrollView *DocumentEditor;
 
 @end

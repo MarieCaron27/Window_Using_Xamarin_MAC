@@ -32,6 +32,8 @@ public class AppDelegate : NSApplicationDelegate
     
     [Export ("newDocument:")]
     void NewDocument (NSObject sender) {
+        //var window = NSApplication.SharedApplication.KeyWindow; //Shows the window that is currently active
+        
         // Get new window
         var storyboard = NSStoryboard.FromName ("Main", null);
         var controller = storyboard.InstantiateInitialController() as NSWindowController;

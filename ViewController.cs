@@ -5,6 +5,11 @@ namespace window;
 
 public partial class ViewController : NSViewController
 {
+    public bool DocumentEdited {
+        get { return View.Window.DocumentEdited; }
+        set { View.Window.DocumentEdited = value; }
+    }
+    
     protected ViewController(NativeHandle handle) : base(handle)
     {
         // This constructor is required if the view controller is loaded from a xib or a storyboard.
@@ -38,8 +43,24 @@ public partial class ViewController : NSViewController
         this.View.Window.Title = "Ma fenêtre"; //Puts a title to the window
         
         this.View.Window.Delegate = new EditorWindowDelegate(this.View.Window); //Allows the user to save or not the document
-        //CloseWindow();
+        CloseWindow();
     }
+    
+    /*public override void AwakeFromNib ()
+    {
+        base.AwakeFromNib ();
+
+        // Show when the document is edited
+        DocumentEditor.TextDidChange += (sender, e) => {
+            // Mark the document as dirty
+            DocumentEdited = true;
+        };
+
+        // Overriding this delegate is required to monitor the TextDidChange event
+        DocumentEditor.ShouldChangeTextInRanges += (NSTextView view, NSValue[] values, string[] replacements) => {
+            return true;
+        };
+    }*/
     
     public void CloseWindow ()
     {

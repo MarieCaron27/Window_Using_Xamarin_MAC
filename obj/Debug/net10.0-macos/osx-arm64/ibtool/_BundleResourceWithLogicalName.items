@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <_BundleResourceWithLogicalName Include="obj/Debug/net10.0-macos/osx-arm64/ibtool/Main.storyboardc/NSWindowController-Q4X-0O-iaT.nib">
+      <Optimize>false</Optimize>
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <LogicalName>Main.storyboardc/NSWindowController-Q4X-0O-iaT.nib</LogicalName>
+      <OriginalItemSpec>obj/Debug/net10.0-macos/osx-arm64/ibtool/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/Debug/net10.0-macos/osx-arm64/ibtool/Main.storyboardc/MainMenu.nib">
       <Optimize>false</Optimize>
       <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
@@ -17,6 +23,12 @@
       <Optimize>false</Optimize>
       <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
       <LogicalName>Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</LogicalName>
+      <OriginalItemSpec>obj/Debug/net10.0-macos/osx-arm64/ibtool/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/Debug/net10.0-macos/osx-arm64/ibtool/Main.storyboardc/xoa-Kj-ago-view-o5I-Zi-mhF.nib">
+      <Optimize>false</Optimize>
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <LogicalName>Main.storyboardc/xoa-Kj-ago-view-o5I-Zi-mhF.nib</LogicalName>
       <OriginalItemSpec>obj/Debug/net10.0-macos/osx-arm64/ibtool/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/Debug/net10.0-macos/osx-arm64/ibtool/Main.storyboardc/Info.plist">
