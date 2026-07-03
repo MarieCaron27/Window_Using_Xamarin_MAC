@@ -6,16 +6,9 @@ using Foundation;
 namespace window;
 
 [Register("DocumentPanel")]
-public partial class DocumentPanel : NSViewController
+public partial class DocumentPanel : NSPanel
 {
-    public DocumentPanel() : base("DocumentPanel", null)
+    public DocumentPanel()
     {
-    }
-
-    public override void ViewDidLoad()
-    {
-        base.ViewDidLoad();
-
-        // Do any additional setup after loading the view.
     }
 }

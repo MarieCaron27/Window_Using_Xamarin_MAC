@@ -12,6 +12,10 @@
 		<data>
 		Ktpmriwe3GL4rVNqpzc/J8FC9bQ=
 		</data>
+		<key>Resources/DocumentPanel.nib</key>
+		<data>
+		vzQJLwdRRoOF/KXoeh+3AQQZ2d8=
+		</data>
 		<key>Resources/Main.storyboardc/Info.plist</key>
 		<data>
 		clpfg/19aJMFZgaKTXILx91uRY4=
@@ -1379,14 +1383,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			if57xzCmqV2BQ8LLUU//h3fky7jMRUa+F6nXRhMP9YU=
+			BVPz/ZuljQEv4uIl8+F6kOj+IeBknDMVTFtConLiB5o=
 			</data>
 		</dict>
 		<key>MonoBundle/window.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t2XYxTXU5PNYOYaYwE9hNafT47Pb8xOz+Dq7jdCEYg4=
+			ZcNryTi6GhYtmmWyVcBGhfLgVxutbMffYOjZxgHRGZo=
 			</data>
 		</dict>
 		<key>Resources/AppIcon.icns</key>
@@ -1401,6 +1405,13 @@
 			<key>hash2</key>
 			<data>
 			LkRlGVXwFr8/ikNrE7497vEBqUW+u8vvpS7D+QxU4BY=
+			</data>
+		</dict>
+		<key>Resources/DocumentPanel.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qY5gt9KMbtH+1zXRRb34UYoISjQC7ibLk1LRmH1+rCs=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/Info.plist</key>

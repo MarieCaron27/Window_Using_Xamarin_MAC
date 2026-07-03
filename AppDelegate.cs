@@ -9,6 +9,9 @@ public class AppDelegate : NSApplicationDelegate
     public override void DidFinishLaunching(NSNotification notification)
     {
         // Insert code here to initialize your application
+        // Display panel
+        var panel = new DocumentPanel();
+        panel.MakeKeyAndOrderFront (this);
     }
 
     public override void WillTerminate(NSNotification notification)
